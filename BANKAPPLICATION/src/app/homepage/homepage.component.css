@@ -1,0 +1,40 @@
+html{
+    background: linear-gradient(to bottom, rgb(243, 252, 117), rgb(247, 245, 229) 60%, #eee 100%);
+}
+.axis {
+    font: 10px sans-serif;
+    
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.axis-title {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+.axis--x path {
+    display: none;
+    
+}
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+.linechart{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(248, 239, 239);
+}
+.linechart:hover{
+    background-color: honeydew;
+    width: 430px;
+    height: 430px;
+}
+

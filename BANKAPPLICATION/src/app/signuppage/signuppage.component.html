@@ -1,0 +1,111 @@
+<html style="padding: 10px;text-align:center;background-color:antiquewhite;height:100%">
+  <h1 style="color: rgb(17, 17, 17);padding:10px;font-size:xx-larger;font-weight:bolder;text-align:left">ENTER YOUR DETAITLES:</h1>
+<div style="text-align:justify;">
+    <form [formGroup]="firstFormGroup" class="form-control" style=" margin:auto;width:100%;padding:10px;">
+      <h2>ENTER YOUR PERSONAL DETATILES :</h2>
+      <label>FIRST NAME :
+      <mat-form-field>
+        <mat-label>
+        <input matInput type="text" placeholder="FIRST NAME" formControlName="firstname" required>
+      </mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('firstname')?.invalid && firstFormGroup.get('firstname')?.touched">*FIRST NAME IS REQUIRED</mat-error>
+    </label>
+      <br/>
+      <label>LAST NAME :
+      <mat-form-field>
+        <mat-label>
+        <input matInput type="text" placeholder="LAST NAME" formControlName="lastname" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('lastname')?.invalid && firstFormGroup.get('lastname')?.touched">*LAST NAME IS REQUIRED</mat-error></label>
+      <br/>
+      <label>BIRTH DATE : 
+      <mat-form-field>
+        <mat-label>
+        <input type="date"  matInput placeholder="BIRTH DATE" formControlName="dob" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('dob')?.invalid && firstFormGroup.get('dob')?.touched">*BIRTH DATE IS REQUIRED</mat-error>
+      </label>
+      <br/>
+      <label>GENDER :
+      <mat-radio-group aria-label="SELECT THE GENDER" formControlName="gender" required>
+        <mat-radio-button value="male"  required>Male</mat-radio-button>
+        <mat-radio-button value="female" required>Female</mat-radio-button>
+        <mat-radio-button value="others"required >Others</mat-radio-button>
+      </mat-radio-group>
+      <mat-error class="err" *ngIf="firstFormGroup.get('gender')?.invalid && firstFormGroup.get('gender')?.touched">*GENDER IS REQUIRED</mat-error>
+      </label>
+      <br>
+      <label>EMAIL - ID :
+      <mat-form-field>
+        <mat-label>
+        <input matInput type="email" placeholder="EMAIL - ID" formControlName="emailid" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('emailid')?.invalid && firstFormGroup.get('emailid')?.touched">*EMAIL - ID IS REQUIRED</mat-error>
+      </label>
+      <br/>
+      <label>MOBILE NUMBER : 
+      <mat-form-field>
+        <mat-label>
+        <input matInput type="text" placeholder="MOBILE NUMBER" formControlName="mobilenumber" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('mobilenumber')?.invalid && firstFormGroup.get('mobilenumber')?.touched">*MOBILE NUMBER IS REQUIRED</mat-error>
+      </label>
+      <br/>
+      <hr>
+      <h2>ENTER THE ACCOUNT DETAITLES :</h2>
+      <label>ACCOUNT NUMBER :
+      <mat-form-field>
+        <mat-label>
+        <input matInput type="text" placeholder="ACCOUNT NUMBER" formControlName="accountnumber" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('accountnumber')?.invalid && firstFormGroup.get('accountnumber')?.touched">*ACCOUNT NUMBER IS REQUIRED</mat-error>
+    </label>
+      <br/>
+      <label>IFSC CODE :
+      <mat-form-field>
+        <mat-label>
+        <input matInput type="text"  placeholder="IFSC CODE" formControlName="ifsccode" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('ifsccode')?.invalid && firstFormGroup.get('ifsccode')?.touched">*IFSC CODE IS REQUIRED</mat-error>
+    </label>
+      <br/>
+      <label> ATM CARD NUMBER :
+      <mat-form-field>
+        <mat-label>
+        <input matInput type="text" placeholder="ATM CARD NUMBER" formControlName="atmcardnumber" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('atmcardnumber')?.invalid && firstFormGroup.get('atmcardnumber')?.touched">*ATM CARD NUMBER IS REQUIRED</mat-error>
+      </label>
+      <br/>
+      <label>EXPIRY DATE OF ATM CARD :
+      <mat-form-field>
+        <mat-label>
+        <input type="date"  matInput placeholder="EXPIRY DATE" formControlName="expirydate" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('expirydate')?.invalid && firstFormGroup.get('expirydate')?.touched">*EXPIRY DATE IS REQUIRED</mat-error>
+    </label>
+      <br/>
+      <label>BRANCH LOCATION :
+      <mat-form-field>
+        <mat-label>
+        <input matInput type="text"  placeholder="BRANCH LOCATION" formControlName="branch" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('branch')?.invalid && firstFormGroup.get('branch')?.touched">*BRANCH LOCATION IS REQUIRED</mat-error>
+      </label>
+      <br/>
+      <label>NEW PASSWORD :
+      <mat-form-field>
+        <mat-label>
+        <input matInput placeholder="CREATE PASSWORD" formControlName="password" required></mat-label>
+      </mat-form-field>
+      <mat-error class="err" *ngIf="firstFormGroup.get('password')?.invalid && firstFormGroup.get('password')?.touched">*NEW PASSWORD IS REQUIRED</mat-error>
+    </label>
+      <br/>
+      <div>
+        <button class="btn btn-danger"(click)="reset()"  >CLEAR</button>
+        <button class="btn btn-success" (click)="onsubmit()"[disabled]="this.firstFormGroup.invalid" >Submit</button>
+      </div>
+    </form>
+</div>
+</html>

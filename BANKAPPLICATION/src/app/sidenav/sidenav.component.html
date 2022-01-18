@@ -1,0 +1,25 @@
+<html style="background: linear-gradient(to bottom, rgb(117, 117, 252), rgb(216, 216, 241) 50%, #eee 100%);">
+<mat-drawer-container style="height: 100%;">
+<mat-drawer mode="side" opened="true">
+    <div class="ogo py-4">
+        <img src="../../assets/bank.jpeg" alt="COMPANY LOGO" width="250px" height="200px"/>
+    </div>
+    <mat-divider></mat-divider>
+    <br>
+    <br>
+    <button mat-list-item routerLink="homepage" routerLinkActive="list-item-active" class="btn btn-sucess">
+        <mat-icon>home</mat-icon>DASHBOARD
+    </button>
+    <button mat-list-item routerLink="aboutpage" routerLinkActive="list-item-active"class="btn btn-sucess">
+        <mat-icon>help</mat-icon>CONTACT US
+        </button>
+    <button mat-list-item routerLink="header" routerLinkActive="list-item-active" class="btn btn-sucess"><mat-icon>notifications</mat-icon>Notification 
+    </button>
+    <button mat-list-item class="btn btn-sucess"><mat-icon>edit</mat-icon>Add
+    </button>
+    </mat-drawer>
+    <mat-card-content>
+    <router-outlet></router-outlet>
+    </mat-card-content>
+    <mat-drawer-container>
+<html>
