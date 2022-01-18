@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 
@@ -14,7 +15,8 @@ export class SignuppageComponent implements OnInit {
  
 
     constructor(  private formBuilder:FormBuilder,
-      private api:ApiService) { }
+      private api:ApiService,
+      private router:Router) { }
 
   ngOnInit(){
 
@@ -40,14 +42,14 @@ export class SignuppageComponent implements OnInit {
     let save = this.firstFormGroup.value
     this.api.postdata(save).subscribe(ref=>{this.data=ref,
     console.log("data is posted to database"+ this.data)})
-    this.firstFormGroup.reset() 
-    this.show=!this.show
+    this.firstFormGroup.reset();
+    alert('Signup Success and redirecting to Loginpage...')
+    setTimeout(() => {
+      this.router.navigate(['/loginpage'])
+  }, 3000);
+   
   }
   reset(){
     this.firstFormGroup.reset() 
-  }
-  show=true
-  showed(){
-    this.show=!this.show
   }
 }

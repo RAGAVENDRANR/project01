@@ -10,6 +10,8 @@ import { NopageComponent } from './nopage/nopage.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 // modules from angular
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,10 +39,13 @@ import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 import {RatingModule} from 'primeng/rating';
 import {TooltipModule} from 'primeng/tooltip';
-import { HeaderComponent } from './header/header.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-
-
+import {DockModule} from 'primeng/dock';
+import {CardModule} from 'primeng/card';
+import {ToastModule} from 'primeng/toast';
+import {MenubarModule} from 'primeng/menubar';
+import { MessageService } from 'primeng/api';
+import {InputMaskModule} from 'primeng/inputmask';
+import {BadgeModule} from 'primeng/badge';
 
 @NgModule({
   declarations: [
@@ -82,9 +87,15 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     ButtonModule,
     RatingModule,
     TooltipModule,
+    DockModule,
+    CardModule,
+    ToastModule,
+    MenubarModule,
+    InputMaskModule,
+    BadgeModule,
     
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
