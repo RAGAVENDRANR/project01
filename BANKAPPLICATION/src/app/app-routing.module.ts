@@ -10,6 +10,7 @@ import { NopageComponent } from './nopage/nopage.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SignuppageComponent } from './signuppage/signuppage.component';
 import { DonutchartComponent } from './donutchart/donutchart.component';
+import { StackbarchartComponent } from './stackbarchart/stackbarchart.component';
 
 const routes: Routes = [
   {path:'',redirectTo:"/loginpage",pathMatch:"full"},                 // for defauld homepage opening on first application lodaing
@@ -37,6 +38,10 @@ const routes: Routes = [
 {
   path:'donut',
   component:DonutchartComponent
+},
+{
+  path:'stacked',
+  component:StackbarchartComponent
 }
   ],
 },

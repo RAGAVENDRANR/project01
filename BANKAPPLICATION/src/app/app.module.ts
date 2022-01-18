@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { DonutchartComponent } from './donutchart/donutchart.component';
+import { StackbarchartComponent } from './stackbarchart/stackbarchart.component';
+
 
 // modules from angular
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -47,7 +50,6 @@ import { MessageService } from 'primeng/api';
 import {InputMaskModule} from 'primeng/inputmask';
 import {BadgeModule} from 'primeng/badge';
 import {GMapModule} from 'primeng/gmap';
-import { DonutchartComponent } from './donutchart/donutchart.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,8 @@ import { DonutchartComponent } from './donutchart/donutchart.component';
     MainpageComponent,
     HeaderComponent,
     SidenavComponent,
-    DonutchartComponent
+    DonutchartComponent,
+    StackbarchartComponent
   ],
   imports: [
     BrowserModule,
