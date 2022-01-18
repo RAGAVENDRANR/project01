@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApiService } from '../api.service';
-
 
 @Component({
   selector: 'app-loginpage',
@@ -15,8 +13,8 @@ export class LoginpageComponent implements OnInit {
   login: any;
   message: any;
     constructor(  private formBuilder:FormBuilder,
-                  private router:Router,
-                  private apiService:ApiService) { }
+                  private router:Router
+                  ) { }
 
   ngOnInit(){
     this.loginform =this.formBuilder.group({
@@ -27,6 +25,7 @@ export class LoginpageComponent implements OnInit {
   }
   onsubmit(){
     console.log(this.loginform.value);
+    this.router.navigate(['/sidenav/homepage'])
     this.loginform.reset()
   }
 }

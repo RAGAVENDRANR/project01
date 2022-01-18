@@ -1,23 +1,42 @@
 .logo{
     text-align: center;
-    padding:2.6rem 1rem;
+    padding:2rem;
 }
 .mat-icon{
-    vertical-align: centre ;
+    vertical-align: right ;
     margin-right: 1rem;
 }
 .mat-divider{
-    border-top-width: 2px;
-    border-color:aliceblue;
+    border-top-width: 10px;
+    border-color:rgb(70, 71, 71);
 }
 .mat-list-item{
     color:rgb(22, 22, 22) !important;
-    font-size: 0.8rem;
-    height:44px !important;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height:64px !important;
     margin-bottom:4px ;
     border-radius: 5px;
     margin:0 8px;
 }   
 .mat-list-item:hover{
-        background-color:rgb(240, 229, 229); 
+        background-color:rgb(247, 239, 239);
+       font-style: italic;
+       font-size: 1.5rem;
+
+}
+:host {
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+mat-drawer{
+    padding: 30px;
+    width: 20rem;
+    height: 100%;
+    background-color: rgb(172, 191, 211);
+}
+mat-drawer-comtainer {
+    height:100%;
 }

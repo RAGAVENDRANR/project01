@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
+  route:any;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-
+  showhomepage(){
+    this.router.navigate(['homepage'],{relativeTo:this.route})
+  }
+  showaboutpage(){
+    this.router.navigate(['aboutpage'],{relativeTo:this.route})
+  }
 }

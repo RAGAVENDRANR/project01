@@ -11,15 +11,32 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { SignuppageComponent } from './signuppage/signuppage.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:"/homepage",pathMatch:"full"},                 // for defauld homepage opening on first application lodaing
-  {path:"homepage",component:HomepageComponent},
+  {path:'',redirectTo:"/loginpage",pathMatch:"full"},                 // for defauld homepage opening on first application lodaing
+  {path:"root",component:AppComponent},
+  // {path:"homepage",component:HomepageComponent},
   {path:"loginpage",component:LoginpageComponent},
   {path:"signuppage",component:SignuppageComponent},
-  {path:"aboutpage",component:AboutpageComponent},
+  // {path:"aboutpage",component:AboutpageComponent},
   {path:'mainpage',component:MainpageComponent},
-  {path:'sidenav',component:SidenavComponent},
-  {path:'header',component:HeaderComponent},
-  {path:"nopage",component:NopageComponent},           
+  {path:'sidenav',component:SidenavComponent,
+  children: [
+    {
+      path: 'homepage', 
+      component: HomepageComponent, 
+    },
+    {
+      path: 'aboutpage',
+      component: AboutpageComponent, 
+    },
+    {
+      path:"header",
+      component:HeaderComponent,
+    },
+
+  ],
+},
+  // {path:'header',component:HeaderComponent},
+  {path:"nopage",component:NopageComponent},
   {path:'**',component:NopageComponent}                   //Wildcard routing which leads to nopage in worng urlnavigation
 ];
 
@@ -28,3 +45,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents =[AppComponent,LoginpageComponent,SignuppageComponent,HomepageComponent,AboutpageComponent,HeaderComponent,NopageComponent
+
+]

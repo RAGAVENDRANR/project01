@@ -70,6 +70,21 @@
       "expirydate": "",
       "ifsccode": "",
       "branch": ""
+    },
+    {
+      "firstname": "IUB",
+      "lastname": "IUBIUB",
+      "emailid": "IHOIHO",
+      "dob": "0098-09-08",
+      "gender": "male",
+      "mobilenumber": "HOIHOIHO",
+      "password": "HOIHOIH",
+      "accountnumber": "HOIOOI",
+      "atmcardnumber": "IHHOHOIOIHOI",
+      "expirydate": "275760-09-08",
+      "ifsccode": "OIHOIHOIH",
+      "branch": "HIOHIOJOIHOI",
+      "id": 6
     }
   ],
   "customeraccountdetatiles": [
