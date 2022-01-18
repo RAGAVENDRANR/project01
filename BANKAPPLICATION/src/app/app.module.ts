@@ -46,6 +46,8 @@ import {MenubarModule} from 'primeng/menubar';
 import { MessageService } from 'primeng/api';
 import {InputMaskModule} from 'primeng/inputmask';
 import {BadgeModule} from 'primeng/badge';
+import {GMapModule} from 'primeng/gmap';
+import { DonutchartComponent } from './donutchart/donutchart.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import {BadgeModule} from 'primeng/badge';
     AboutpageComponent,
     MainpageComponent,
     HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    DonutchartComponent
   ],
   imports: [
     BrowserModule,
@@ -93,6 +96,7 @@ import {BadgeModule} from 'primeng/badge';
     MenubarModule,
     InputMaskModule,
     BadgeModule,
+    GMapModule
     
   ],
   providers: [MessageService],

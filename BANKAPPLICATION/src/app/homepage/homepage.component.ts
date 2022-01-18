@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import * as d3 from 'd3';
 import * as d3Scale from 'd3';
@@ -6,15 +6,6 @@ import * as d3Shape from 'd3';
 import * as d3Array from 'd3';
 import * as d3Axis from 'd3';
 
-export const POPULATION: any[] = [
-  {age: '<5', population: 2704659},
-  {age: '5-13', population: 4499890},
-  {age: '14-17', population: 2159981},
-  {age: '18-24', population: 3853788},
-  {age: '25-44', population: 14106543},
-  {age: '45-64', population: 8819342},
-  {age: '≥65', population: 612463}
-];
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -46,13 +37,13 @@ export class HomepageComponent implements OnInit {
   private line!: d3Shape.Line<[number, number]>; // this is line defination
  // this is line defination
 
-  constructor (private cdr: ChangeDetectorRef) {
+  constructor () {
     // configure margins and width/height of the graph
     this.width = 300 - this.margin.left - this.margin.right;
     this.height =300 - this.margin.top - this.margin.bottom;
   }
  
- ngOnInit():void {
+ ngOnInit(){
     console.log("oninit console")
     this.buildSvg();
     this.addXandYAxis();
@@ -67,7 +58,7 @@ export class HomepageComponent implements OnInit {
     this.svg = d3.select('svg')
       .append('g')
       .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')');
-      this.cdr.detectChanges();
+      
   }
   private addXandYAxis() {
     // range of data configuring
@@ -84,7 +75,7 @@ export class HomepageComponent implements OnInit {
     this.svg.append('g')
         .attr('class', 'axis axis--y')
         .call(d3Axis.axisLeft(this.y));
-        this.cdr.detectChanges();
+  
   }
 
   private drawLineAndPath() {
@@ -97,7 +88,7 @@ export class HomepageComponent implements OnInit {
         .datum(this.data)
         .attr('class', 'line')
         .attr('d', this.line);
-        this.cdr.detectChanges();
+       
   }
 // donout chart
 title2 = 'Donut Chart';
