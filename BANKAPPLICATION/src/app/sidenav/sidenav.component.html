@@ -1,25 +1,64 @@
-<html style="background: linear-gradient(to bottom, rgb(117, 117, 252), rgb(216, 216, 241) 50%, #eee 100%);">
+<html>
 <mat-drawer-container style="height: 100%;">
+    <!--SIDE PANNEL BAR OF THE PAGE-->
 <mat-drawer mode="side" opened="true">
-    <div class="ogo py-4">
-        <img src="../../assets/bank.jpeg" alt="COMPANY LOGO" width="250px" height="200px"/>
+    <div class="ogo py-3">
+        <img src="../../assets/bg1.jpg" alt="COMPANY LOGO" width="250px" height="200px"/>
     </div>
     <mat-divider></mat-divider>
     <br>
     <br>
-    <button mat-list-item routerLink="homepage" routerLinkActive="list-item-active" class="btn btn-sucess">
+    <button mat-list-item routerLink="homepage" routerLinkActive="list-item-active" class="btn">
         <mat-icon>home</mat-icon>DASHBOARD
     </button>
-    <button mat-list-item routerLink="aboutpage" routerLinkActive="list-item-active"class="btn btn-sucess">
+    <button mat-list-item routerLink="aboutpage" routerLinkActive="list-item-active"class="btn">
         <mat-icon>help</mat-icon>CONTACT US
         </button>
-    <button mat-list-item routerLink="header" routerLinkActive="list-item-active" class="btn btn-sucess"><mat-icon>notifications</mat-icon>Notification 
+    <button mat-list-item routerLink="header" routerLinkActive="list-item-active" class="btn"><mat-icon>notifications</mat-icon>Notification 
     </button>
-    <button mat-list-item class="btn btn-sucess"><mat-icon>edit</mat-icon>Add
+    <button mat-list-item routerLink="donut" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>Notification 
+    </button>
+    <button mat-list-item routerLink="stacked" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>Notification 
+    </button>
+    <button mat-list-item class="btn"><mat-icon>edit</mat-icon>Add
     </button>
     </mat-drawer>
+
+    <!--CONTENT OF THE HTML-->
     <mat-card-content>
+
+        <!--HEADER SECTION OF THE PAGE-->
+
+        <header>
+            <p-toast position="bottom-center" key="c" (onClose)="onReject()" [baseZIndex]="1000" style="text-align:center">
+                <ng-template let-message pTemplate="message">
+                    <div class="p-flex p-flex-column" style="flex: 1">
+                        <div class="p-text-center">
+                            <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+                            <h4>{{message.summary}}</h4>
+                            <!-- <p>{{message.detail}}</p> -->
+                        </div>
+                        <div class="p-grid p-fluid">
+                            <div class="p-col-6">
+                                <button type="button" pButton (click)="onConfirm()" label="Yes" class="p-button-success"></button>
+                            </div>
+                            <div class="p-col-6">
+                                <button type="button" pButton (click)="onReject()" label="No" class="p-button-secondary"></button>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-toast>
+            <p-menubar [model]="items">
+                <button (click)="notifi()" icon="pi pi-bell" pButton value="2"></button>
+                <button pButton label="Logout" icon="pi pi-power-off" (click)="logoutfunction()" pRipple class="ui-button-warning"></button>
+                <button  pButton icon="pi pi-user" (click)='profile()'></button>
+            </p-menubar>
+        </header>
+
+        <!--ROUTER OULET FOR CHILD COMPONENTS-->
     <router-outlet></router-outlet>
+    
     </mat-card-content>
     <mat-drawer-container>
 <html>

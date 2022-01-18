@@ -28,4 +28,9 @@ export class LoginpageComponent implements OnInit {
     this.router.navigate(['/sidenav/homepage'])
     this.loginform.reset()
   }
+  register(){
+    console.log("register button is called");
+    this.router.navigate(["signuppage"])
+
+  }
 }

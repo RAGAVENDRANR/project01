@@ -9,6 +9,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { NopageComponent } from './nopage/nopage.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SignuppageComponent } from './signuppage/signuppage.component';
+import { DonutchartComponent } from './donutchart/donutchart.component';
+import { StackbarchartComponent } from './stackbarchart/stackbarchart.component';
 
 const routes: Routes = [
   {path:'',redirectTo:"/loginpage",pathMatch:"full"},                 // for defauld homepage opening on first application lodaing
@@ -18,6 +20,7 @@ const routes: Routes = [
   {path:"signuppage",component:SignuppageComponent},
   // {path:"aboutpage",component:AboutpageComponent},
   {path:'mainpage',component:MainpageComponent},
+  {path:'donut',component:DonutchartComponent},
   {path:'sidenav',component:SidenavComponent,
   children: [
     {
@@ -32,7 +35,14 @@ const routes: Routes = [
       path:"header",
       component:HeaderComponent,
     },
-
+{
+  path:'donut',
+  component:DonutchartComponent
+},
+{
+  path:'stacked',
+  component:StackbarchartComponent
+}
   ],
 },
   // {path:'header',component:HeaderComponent},
@@ -45,6 +55,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents =[AppComponent,LoginpageComponent,SignuppageComponent,HomepageComponent,AboutpageComponent,HeaderComponent,NopageComponent
+export const routingComponents =[AppComponent,LoginpageComponent,
+  SignuppageComponent,HomepageComponent,AboutpageComponent,HeaderComponent,NopageComponent,DonutchartComponent
 
 ]

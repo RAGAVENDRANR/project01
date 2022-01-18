@@ -1,5 +1,5 @@
 <html style="padding: 10px;text-align:center;background-color:antiquewhite;height:100%">
-  <h1 style="color: rgb(17, 17, 17);padding:10px;font-size:xx-larger;font-weight:bolder;text-align:left">ENTER YOUR DETAITLES:</h1>
+  <h1 style="color: rgb(17, 17, 17);padding:10px;font-size:2rem;text-align:left">ENTER YOUR DETAITLES:</h1>
 <div style="text-align:justify;">
     <form [formGroup]="firstFormGroup" class="form-control" style=" margin:auto;width:100%;padding:10px;">
       <h2>ENTER YOUR PERSONAL DETATILES :</h2>
@@ -44,6 +44,7 @@
       <mat-error class="err" *ngIf="firstFormGroup.get('emailid')?.invalid && firstFormGroup.get('emailid')?.touched">*EMAIL - ID IS REQUIRED</mat-error>
       </label>
       <br/>
+      <!-- <p-inputMask mask="9 9 9 9 9 9 9 9 9 9 " >MOBILE NUMBER:</p-inputMask> -->
       <label>MOBILE NUMBER : 
       <mat-form-field>
         <mat-label>
@@ -104,7 +105,7 @@
       <br/>
       <div>
         <button class="btn btn-danger"(click)="reset()"  >CLEAR</button>
-        <button class="btn btn-success" (click)="onsubmit()"[disabled]="this.firstFormGroup.invalid" >Submit</button>
+        <button class="btn btn-success" (click)="onsubmit()"[disabled]="firstFormGroup.invalid" >Submit</button>
       </div>
     </form>
 </div>
