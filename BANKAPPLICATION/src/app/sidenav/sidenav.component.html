@@ -8,38 +8,30 @@
     <mat-divider></mat-divider>
     <br>
     <br>
-    <button mat-list-item routerLink="homepage" routerLinkActive="list-item-active" class="btn"><mat-icon>home</mat-icon>DASHBOARD</button>
-    <button mat-list-item routerLink="aboutpage" routerLinkActive="list-item-active"class="btn"><mat-icon>help</mat-icon>CONTACT US</button>
+    <button mat-list-item (click)="showhomepage()" class="btn"> <mat-icon>home</mat-icon>DASHBOARD</button>
+
+    <button mat-list-item (click)="showaboutpage()" class="btn"><mat-icon>help</mat-icon>CONTACT US</button>
+
     <button mat-list-item routerLink="header" routerLinkActive="list-item-active" class="btn"><mat-icon>notifications</mat-icon>Notification </button>
-    <button mat-list-item routerLink="donut" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon> DONUT CHART </button>
-    <button mat-list-item routerLink="stacked" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>STACKED CHART </button>
-    <button mat-list-item (click)="showhomepage()" class="btn">
-        <mat-icon>home</mat-icon>DASHBOARD
-    </button>
-    <button mat-list-item (click)="showaboutpage()" class="btn">
-        <mat-icon>help</mat-icon>CONTACT US
-        </button>
-    <button mat-list-item routerLink="header" routerLinkActive="list-item-active" class="btn"><mat-icon>notifications</mat-icon>Notification 
-    </button>
-    <!-- <button mat-list-item routerLink="donut" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>Notification 
-    </button>
-    <button mat-list-item routerLink="stacked" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>Notification 
-    </button> -->
-    <button mat-list-item class="btn"><mat-icon>edit</mat-icon>Add
-    </button>
+
+    <button mat-list-item routerLink="donut" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>Notification </button>
+
+    <button mat-list-item routerLink="stacked" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>Notification </button>
+
+    <button mat-list-item class="btn"><mat-icon>edit</mat-icon>Add</button>
+
     </mat-drawer>
 
-    <!--CONTENT OF THE HTML-->
     <mat-card-content>
-        <!--HEADER SECTION OF THE PAGE-->
+     
         <header style="background-color: rgb(240, 206, 196);text-align:right">
-            <!-- <p-menubar>
-                
-            </p-menubar> -->
+          
             <button (click)="notifi()" icon="pi pi-bell" pButton value="2"></button>
-                <button pButton label="Logout" icon="pi pi-power-off" (click)="logoutfunction()" pRipple class="ui-button-warning"></button>
-                <button  pButton icon="pi pi-user" (click)='profile()'></button>
+            <button pButton label="Logout" icon="pi pi-power-off" (click)="logoutfunction()" pRipple class="ui-button-warning"></button>
+            <button  pButton icon="pi pi-user" (click)='profile()'></button>
+
         </header>
+
         <p-toast position="bottom-center" key="c" (onClose)="onReject()" [baseZIndex]="1000" style="text-align:center">
             <ng-template let-message pTemplate="message">
                 <div class="p-flex p-flex-column" style="flex: 1">
@@ -52,7 +44,7 @@
                 </div>
             </ng-template>
         </p-toast>
-        <!--ROUTER OULET FOR CHILD COMPONENTS-->
+      
     <router-outlet></router-outlet>
     
     </mat-card-content>

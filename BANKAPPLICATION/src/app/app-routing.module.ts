@@ -13,31 +13,24 @@ import { DonutchartComponent } from './donutchart/donutchart.component';
 import { StackbarchartComponent } from './stackbarchart/stackbarchart.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:"/loginpage",pathMatch:"full"},                 // for defauld homepage opening on first application lodaing
+  {path:'',redirectTo:"/loginpage",pathMatch:"full"},            
   {path:"root",component:AppComponent},
-  // {path:"homepage",component:HomepageComponent},
   {path:"loginpage",component:LoginpageComponent},
   {path:"signuppage",component:SignuppageComponent},
-  // {path:"aboutpage",component:AboutpageComponent},
-
-  {path:'mainpage',component:MainpageComponent},
-  {path:'donut',component:DonutchartComponent},
-  {path:'stacked',component:StackbarchartComponent},
-  // {path:'mainpage',component:MainpageComponent},
-  // {path:'donut',component:DonutchartComponent},
-
+  
   {path:'sidenav',component:SidenavComponent,
+  
   children: [
     {path: 'homepage',component: HomepageComponent},
     {path: 'aboutpage',component: AboutpageComponent},
     {path:"header",component:HeaderComponent,},
     {path:'donut',component:DonutchartComponent},
-    {path:'stacked',component:StackbarchartComponent}
-  ],
-},
-  // {path:'header',component:HeaderComponent},
+    {path:'stacked',component:StackbarchartComponent},
+    {path:'mainpage',component:MainpageComponent},
+      ]},
+
   {path:"nopage",component:NopageComponent},
-  {path:'**',component:NopageComponent}                   //Wildcard routing which leads to nopage in worng urlnavigation
+  {path:'**',component:NopageComponent}     
 ];
 
 @NgModule({
