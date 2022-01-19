@@ -28,7 +28,7 @@
 }
 mat-drawer{
     padding: 30px;
-    width: 20rem;
+    width: 21rem;
     height: 100%;
     background: linear-gradient(to left, rgb(125, 125, 128), rgb(217, 217, 219) 50%, #eee 100%)
 }
@@ -49,6 +49,6 @@ button {
 }
 .btn{
     text-align:left;
-    width: 240px;
+    width: 250px;
     height: 100px;
 }
