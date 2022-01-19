@@ -23,7 +23,7 @@ export interface Margin {
 })
 export class StackbarchartComponent implements OnInit {
 
-  title = 'Stacked Bar Chart';
+  title = '';
 
   private margin!: Margin;
 
@@ -46,7 +46,7 @@ export class StackbarchartComponent implements OnInit {
   }
 
   private initMargins() {
-      this.margin = {top: 20, right: 20, bottom: 30, left: 40};
+      this.margin = {top:50, right:10, bottom:50, left:60};
   }
 
   private initSvg() {

@@ -19,8 +19,8 @@ const routes: Routes = [
   {path:"loginpage",component:LoginpageComponent},
   {path:"signuppage",component:SignuppageComponent},
   // {path:"aboutpage",component:AboutpageComponent},
-  {path:'mainpage',component:MainpageComponent},
-  {path:'donut',component:DonutchartComponent},
+  // {path:'mainpage',component:MainpageComponent},
+  // {path:'donut',component:DonutchartComponent},
   {path:'sidenav',component:SidenavComponent,
   children: [
     {

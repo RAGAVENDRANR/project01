@@ -1,6 +1,3 @@
-html{
-    background: linear-gradient(to bottom, rgb(117, 117, 252), rgb(216, 216, 241) 50%, #eee 100%)
-}
 .mat-icon{
     vertical-align: right ;
     margin-right: 1rem;
@@ -33,10 +30,11 @@ mat-drawer{
     padding: 30px;
     width: 20rem;
     height: 100%;
-    background-color:grey;
+    background: linear-gradient(to left, rgb(125, 125, 128), rgb(217, 217, 219) 50%, #eee 100%)
 }
 mat-drawer-comtainer {
     height:100%;
+   
 }
 button {
     min-width: 2rem;
