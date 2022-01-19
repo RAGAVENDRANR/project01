@@ -5,22 +5,27 @@ html{
     padding:2rem;
    
 }
-.first svg{
+.stackbarchart{
     background-color: aliceblue;
-    width:350px;
-    height:350px;
+    padding: 30px;
+    width:950px;
+    height:600px;
 }
-.first svg:hover{
-    width:360px;
-    height:360px;
+.stackbarchart:hover{
+    width:970px;
+    height:630px;
     background-color: burlywood;
-    transition: 500ms;
+    transition: 1000ms;
 }
-.arc text {
-    font: 10px sans-serif;
-    text-anchor: middle;
-  }
-  
-  .arc path {
-    stroke: #fff;
-  }
+.donutchart{
+    background-color: aliceblue;
+    width:550px;
+    height:350px;
+    margin: 20 20 20 20;
+}
+.donutchart:hover{
+    width:570px;
+    height:370px;
+    background-color: rgb(226, 155, 233);
+    transition: 100ms;
+}

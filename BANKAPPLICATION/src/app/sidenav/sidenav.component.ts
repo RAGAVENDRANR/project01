@@ -20,7 +20,7 @@ export class SidenavComponent implements OnInit {
              private messageService: MessageService, 
             private primengConfig: PrimeNGConfig) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.primengConfig.ripple = true;
     this.items = [
       {
@@ -48,10 +48,10 @@ export class SidenavComponent implements OnInit {
   ];
   }
   showhomepage(){
-    this.router.navigate(['homepage'],{relativeTo:this.route})
+    this.router.navigate(['sidenav/homepage'])
   }
   showaboutpage(){
-    this.router.navigate(['aboutpage'],{relativeTo:this.route})
+    this.router.navigate(['sidenav/aboutpage'])
   }
   logoutfunction(){
     console.log("reroute function called"),

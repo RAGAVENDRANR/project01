@@ -14,14 +14,14 @@ export class DonutchartComponent implements OnInit {
 
   private width: number;
   private height: number;
-  private margin = {top: 20, right: 20, bottom: 30, left: 40};
+  private margin = {top: 50, right: 90, bottom: 50, left: 10};
 
   private svg: any;
 
   constructor () {
     // configure margins and width/height of the graph
-    this.width = 300 - this.margin.left - this.margin.right;
-    this.height =300 - this.margin.top - this.margin.bottom;
+    this.width = 400 - this.margin.left - this.margin.right;
+    this.height =400 - this.margin.top - this.margin.bottom;
   }
  
  ngOnInit(){

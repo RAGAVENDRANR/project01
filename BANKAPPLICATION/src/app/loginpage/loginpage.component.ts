@@ -25,7 +25,7 @@ export class LoginpageComponent implements OnInit {
   }
   onsubmit(){
     console.log(this.loginform.value);
-    this.router.navigate(['/sidenav/homepage'])
+    this.router.navigate(['sidenav'])
     this.loginform.reset()
   }
   register(){
