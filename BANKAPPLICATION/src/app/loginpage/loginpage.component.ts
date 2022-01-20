@@ -1,6 +1,8 @@
+import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-loginpage',
@@ -16,33 +18,61 @@ export class LoginpageComponent implements OnInit {
   userid: any;
   pwd: any;
   show=false;
+  datalist: any;
+  save: any;
+  username=[];
+  userpassword=[];
+  cred: any;
+  userlist: any;
     constructor(  private formBuilder:FormBuilder,
-                  private router:Router
+                  private router:Router,
+                  private api:ApiService,
                   ) { }
 
   ngOnInit(){
     this.loginform =this.formBuilder.group({
-      userid:['',Validators.compose([Validators.required])],
+      userid:['',Validators.required],
       pwd:['',Validators.required]
-    });
-    
+    }); 
   }
-  onsubmit(){
-    console.log(this.loginform.value);
-    if(this.loginform.controls['userid'].value == 'user', this.loginform.controls['pwd'].value == '12345' ){
-      this.router.navigate(['sidenav'])
-      this.cre == ''
-      this.loginform.reset()
-      this.show=false
-    }else {
-      console.log("login credentiatiles is invalid")
-      this.cre == "INVALID CREDENTATILES"
-      this.loginform.reset()
-      this.show=true
-    }
-  }
+
   register(){
     console.log("register button is called");
     this.router.navigate(["signuppage"])
   }
+
+   onsubmit(){   
+     this.api.getdata().subscribe((res:any)=>{this.datalist = res;
+    console.log("DATALIST FETCHING ON BUTTON CLICK" + this.datalist)})
+        this.datalist.forEach((curData: any) =>{
+          let data=curData;
+          if(this.loginform.controls['userid'].value == data.accountnumber &&  this.loginform.controls['pwd'].value == data.password ){
+            this.router.navigate(['sidenav'])
+            this.loginform.reset()
+            this.show=false
+          }else {
+            console.log("login credentiatiles is invalid")
+            this.loginform.reset()
+            this.show=true
+          }
+        })
+    }
+  //   this.username = this.datalist.forEach((element:any) => {
+  //     console.log("hiii",element)
+  //   });
+  //  console.log(this.username)
+
+    // this.userpassword = this.datalist.filter((value2: any) => ( this.datalist.password == value2.password));
+
+  
+  // getcustomerdata( _value: any ,_value2:any){
+  //   this.api.getdata().subscribe((res:any)=>(this.datalist=res))
+  //  this.username = this.datalist.filter((value: any) => this.datalist.email === value.email)
+  //  this.userpassword =this.datalist.filter((value2: any) => this.datalist.password === value2.password);
+  //  console.log("customerdata is userids"+ this.username)
+  //  console.log("customerdata passwords" + this.userpassword)
+  // }
 }
+
+
+

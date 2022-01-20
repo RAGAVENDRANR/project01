@@ -1,5 +1,5 @@
 {
-  "customerdata": [
+  "data": [
     {
       "id": 1,
       "firstname": "USER",
@@ -8,12 +8,15 @@
       "gender": "male",
       "email": "user01@gmail.com",
       "mobilenumber": 9876543210,
-      "accountnumber": 100001,
-      "password": "12345abc@",
       "atmcardnumber": "01",
       "expirydate": "",
       "ifsccode": "",
-      "branch": ""
+      "branch": "",
+      "accountnumber": 100001,
+      "password": "12345",
+      "accountbalance": 100,
+      "withdrawammount": "",
+      "mainbalance": ""
     },
     {
       "id": 2,
@@ -27,7 +30,10 @@
       "atmcardnumber": "01",
       "expirydate": "",
       "ifsccode": "",
-      "branch": ""
+      "branch": "",
+      "accountbalance": 100,
+      "withdrawammount": "",
+      "mainbalance": ""
     },
     {
       "id": 3,
@@ -41,7 +47,10 @@
       "atmcardnumber": "01",
       "expirydate": "",
       "ifsccode": "",
-      "branch": ""
+      "branch": "",
+      "accountbalance": 100,
+      "withdrawammount": "",
+      "mainbalance": ""
     },
     {
       "id": 4,
@@ -55,7 +64,10 @@
       "atmcardnumber": "01",
       "expirydate": "",
       "ifsccode": "",
-      "branch": ""
+      "branch": "",
+      "accountbalance": 100,
+      "withdrawammount": "",
+      "mainbalance": ""
     },
     {
       "id": 5,
@@ -69,166 +81,7 @@
       "atmcardnumber": "01",
       "expirydate": "",
       "ifsccode": "",
-      "branch": ""
-    },
-    {
-      "firstname": "IUB",
-      "lastname": "IUBIUB",
-      "emailid": "IHOIHO",
-      "dob": "0098-09-08",
-      "gender": "male",
-      "mobilenumber": "HOIHOIHO",
-      "password": "HOIHOIH",
-      "accountnumber": "HOIOOI",
-      "atmcardnumber": "IHHOHOIOIHOI",
-      "expirydate": "275760-09-08",
-      "ifsccode": "OIHOIHOIH",
-      "branch": "HIOHIOJOIHOI",
-      "id": 6
-    },
-    {
-      "firstname": "vbhinjokml,",
-      "lastname": "njklm;l,';./",
-      "emailid": "5421ytvhjb",
-      "dob": "2022-01-13",
-      "gender": "male",
-      "mobilenumber": "vyuyuvubu",
-      "password": "uyguygy",
-      "accountnumber": "biuf",
-      "atmcardnumber": "yiyu",
-      "expirydate": "2022-01-14",
-      "ifsccode": "uf7",
-      "branch": "guybiub",
-      "id": 7
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "emailid": "",
-      "dob": "",
-      "gender": "",
-      "mobilenumber": "",
-      "password": "",
-      "accountnumber": "",
-      "atmcardnumber": "",
-      "expirydate": "",
-      "ifsccode": "",
       "branch": "",
-      "id": 8
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "emailid": "",
-      "dob": "",
-      "gender": "",
-      "mobilenumber": "",
-      "password": "",
-      "accountnumber": "",
-      "atmcardnumber": "",
-      "expirydate": "",
-      "ifsccode": "",
-      "branch": "",
-      "id": 9
-    },
-    {
-      "firstname": "iunjkml",
-      "lastname": "iunjokml;,.",
-      "emailid": "54",
-      "dob": "45312-06-08",
-      "gender": "male",
-      "mobilenumber": "yhuijok",
-      "password": "ubiunompo,",
-      "accountnumber": "uijokpolp",
-      "atmcardnumber": "ihuijopko[lp",
-      "expirydate": "2022-01-05",
-      "ifsccode": "binuoimp,o",
-      "branch": "uybiunompo",
-      "id": 10
-    },
-    {
-      "firstname": "yuihjkl",
-      "lastname": "bnjklm",
-      "emailid": "iujokl",
-      "dob": "0002-08-05",
-      "gender": "male",
-      "mobilenumber": "niomkl;,l",
-      "password": "jnmkl,;l",
-      "accountnumber": "jnlmk,.",
-      "atmcardnumber": "jnklm",
-      "expirydate": "0890-06-07",
-      "ifsccode": "knjlm",
-      "branch": "hjnkml,;",
-      "id": 11
-    },
-    {
-      "firstname": "ubinjkml",
-      "lastname": "ybiunojkmpl",
-      "emailid": "iuojkp[l",
-      "dob": "9561-07-08",
-      "gender": "male",
-      "mobilenumber": "iujokp[l",
-      "password": "hijoikpl[",
-      "accountnumber": "inomp,[",
-      "atmcardnumber": "niomp,[",
-      "expirydate": "275760-07-04",
-      "ifsccode": "ihuojkp[l",
-      "branch": "yuijokp[l",
-      "id": 12
-    },
-    {
-      "firstname": "buinjokl",
-      "lastname": "iujokpl",
-      "emailid": "ytvubionjkpo",
-      "dob": "0890-07-06",
-      "gender": "male",
-      "mobilenumber": "binuoimpo,p.",
-      "password": "bhnjmk,l.",
-      "accountnumber": "binuoimpo,[p",
-      "atmcardnumber": "biuojpk[pl",
-      "expirydate": "0890-06-07",
-      "ifsccode": "binuoimpo,p",
-      "branch": "bhinjuiokpo[lp",
-      "id": 13
-    }
-  ],
-  "customeraccountdetatiles": [
-    {
-      "id": 1,
-      "accountnumber": 100001,
-      "password": "12345abc@",
-      "accountbalance": 100,
-      "withdrawammount": "",
-      "mainbalance": ""
-    },
-    {
-      "id": 2,
-      "accountnumber": 100002,
-      "password": "12344abc@",
-      "accountbalance": 100,
-      "withdrawammount": "",
-      "mainbalance": ""
-    },
-    {
-      "id": 3,
-      "accountnumber": 100003,
-      "password": "12343abc@",
-      "accountbalance": 100,
-      "withdrawammount": "",
-      "mainbalance": ""
-    },
-    {
-      "id": 4,
-      "accountnumber": 100004,
-      "password": "12342abc@",
-      "accountbalance": 100,
-      "withdrawammount": "",
-      "mainbalance": ""
-    },
-    {
-      "id": 5,
-      "accountnumber": 100005,
-      "password": "12341abc@",
       "accountbalance": 100,
       "withdrawammount": "",
       "mainbalance": ""
