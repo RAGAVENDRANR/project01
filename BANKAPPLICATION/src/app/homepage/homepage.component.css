@@ -1,0 +1,31 @@
+html{
+    background: linear-gradient(217deg, rgba(243, 118, 118, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(147, 243, 147, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(156, 156, 236, 0.8), rgba(0,0,255,0) 70.71%);
+    padding:2rem;
+   
+}
+.stackbarchart{
+    background-color: aliceblue;
+    padding: 30px;
+    width:950px;
+    height:600px;
+}
+.stackbarchart:hover{
+    width:970px;
+    height:630px;
+    background-color: burlywood;
+    transition: 1000ms;
+}
+.donutchart{
+    background-color: aliceblue;
+    width:550px;
+    height:350px;
+    margin: 20 20 20 20;
+}
+.donutchart:hover{
+    width:570px;
+    height:370px;
+    background-color: rgb(226, 155, 233);
+    transition: 100ms;
+}

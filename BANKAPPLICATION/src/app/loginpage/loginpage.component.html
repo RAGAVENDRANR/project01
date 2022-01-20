@@ -1,0 +1,24 @@
+<html style="background: linear-gradient(to bottom, rgb(117, 117, 252), rgb(216, 216, 241) 50%, #eee 100%);">
+    <h1>.</h1>
+    <div >
+        <form  [formGroup]="loginform" style="width:40rem;text-align: center;line-height:50px;border-radius:30px;padding:50px;background-color:rgb(233, 248, 234);margin: 200px 600px 800px 600px;">
+            <h2 style="text-align: center;font-size:1.5rem;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">LOGIN HERE</h2>
+            <div *ngIf=show style="color:red" >{{cre}}</div>
+            <div class="form-group">
+                <label for="userid" style="text-align: left;font-size:1.2rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                    LOGIN ID * :
+                <input type="text" class="form-control" formControlName="userid" id="userid" autocomplete="off" pTooltip="Enter your username" placeholder="Enter your Login id">
+                <div class="err" *ngIf="loginform.get('userid')?.invalid && loginform.get('userid')?.touched"  style="width:13rem;border-radius:25px" >* LOGIN IS REQUIRED</div></label>
+            </div>
+            <div class="form-group">
+                <label for="pwd" style="text-align: left;font-size:1.2rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                    PASSWORD * :
+                <input type="password" class="form-control" formControlName="pwd" id="pwd" autocomplete="off" pTooltip="Enter your password" placeholder="Enter the Password">
+                <div class="err" *ngIf="loginform.get('pwd')?.invalid && loginform.get('pwd')?.touched"  >* PASSWORD IS REQUIRED</div></label>
+            </div>
+            <button class="btn btn-success" [disabled]="loginform.invalid"  style="width:6rem;border-radius:25px" (click)="onsubmit()" >LOGIN</button>
+            <button class="btn btn-secondary" style="width:6rem;border-radius:25px" (click)="register()" >REGISTER</button>
+        </form>
+    </div>
+</html>
+

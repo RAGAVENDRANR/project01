@@ -1,0 +1,54 @@
+.mat-icon{
+    vertical-align: right ;
+    margin-right: 1rem;
+}
+.mat-divider{
+    border-top-width: 10px;
+    border-color:rgb(70, 71, 71);
+}
+.mat-list-item{
+    color:rgb(22, 22, 22) !important;
+    font-size: 1.2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height:64px !important;
+    margin-bottom:4px ;
+    border-radius: 5px;
+    margin:0 8px;
+}   
+.mat-list-item:hover{
+        background-color:rgb(247, 239, 239);
+       font-size: 1.5rem;
+       transition: 500ms;
+
+}
+:host {
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+mat-drawer{
+    padding: 30px;
+    width: 21rem;
+    height: 100%;
+    background: linear-gradient(to left, rgb(125, 125, 128), rgb(217, 217, 219) 50%, #eee 100%)
+}
+mat-drawer-comtainer {
+    height:100%;
+   
+}
+button {
+    min-width: 2rem;
+    margin-right: .5rem;
+}
+
+@media screen and (max-width: 960px) {
+    button {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+}
+.btn{
+    text-align:left;
+    width: 250px;
+    height: 100px;
+}
