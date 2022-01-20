@@ -19,11 +19,6 @@ export class LoginpageComponent implements OnInit {
   pwd: any;
   show=false;
   datalist: any=[];
-  save: any;
-  username=[];
-  userpassword=[];
-  cred: any;
-  userlist: any;
     constructor(  private formBuilder:FormBuilder,
                   private router:Router,
                   private api:ApiService,
@@ -36,43 +31,54 @@ export class LoginpageComponent implements OnInit {
     }); 
     this.api.getdata().subscribe((res:any)=>{this.datalist = res;
       console.log("DATALIST FETCHING ON BUTTON CLICK" + this.datalist)})
-  }
+    }
+
 
   register(){
     console.log("register button is called");
     this.router.navigate(["signuppage"])
   }
 
-   onsubmit(){   
+  // onsubmit(){
 
-        this.datalist.forEach((curData: any) =>{
-          let data=curData;
-          if(this.loginform.controls['userid'].value == data.email &&  this.loginform.controls['pwd'].value == data.password ){
-            this.router.navigate(['sidenav'])
-            this.loginform.reset()
-            this.show=false
-          }else
-            console.log("login credentiatiles is invalid")
-            this.loginform.reset()
-            this.show=true
-          
-        })
-    }
-  //   this.username = this.datalist.forEach((element:any) => {
-  //     console.log("hiii",element)
-  //   });
-  //  console.log(this.username)
-
-    // this.userpassword = this.datalist.filter((value2: any) => ( this.datalist.password == value2.password));
-
-  
-  // getcustomerdata( _value: any ,_value2:any){
-  //   this.api.getdata().subscribe((res:any)=>(this.datalist=res))
-  //  this.username = this.datalist.filter((value: any) => this.datalist.email === value.email)
-  //  this.userpassword =this.datalist.filter((value2: any) => this.datalist.password === value2.password);
-  //  console.log("customerdata is userids"+ this.username)
-  //  console.log("customerdata passwords" + this.userpassword)
+  //   for (let i=0; i<= this.datalist.length; i++){
+  //     if (this.loginform.controls['userid'].value == this.datalist[i].accountnumber){
+  //       console.log("first if" + this.loginform.controls['userid'].value)
+  //       console.log("first if" + this.datalist[i].accountnumber)
+  //       if (this.loginform.controls['pwd'].value == this.datalist[i].password){
+  //         this.router.navigate(['sidenav']);
+  //          this.loginform.reset()
+  //         this.show=false
+  //         console.log("first if" + this.loginform.controls['userid'].value)
+  //         console.log("first if" + this.datalist[i].accountnumber)
+  //       }
+  //     }
+  //     else {
+  //       this.show=true
+  //       console.log("invalid password")
+  //       this.loginform.reset();
+  //       // setTimeout(()=>window.location.reload(),100)
+  //     } 
+  //   }
   // }
+
+  onsubmit(){
+    this.datalist.forEach((res: any) => {
+console.log('username', this.loginform.controls['userid'].value,res.accountnumber)
+console.log('password', this.loginform.controls['pwd'].value,res.password)
+
+      if(this.loginform.controls['userid'].value == res.accountnumber ){
+        if(this.loginform.controls['pwd'].value == res.password){
+          this.router.navigate(['sidenav']);
+                  //  this.loginform.reset()
+                   this.show=false;
+        }
+      }
+      else{
+        this.show=true
+      }
+    });
+  }
 }
 
 
