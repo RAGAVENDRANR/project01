@@ -85,6 +85,36 @@
       "accountbalance": 100,
       "withdrawammount": "",
       "mainbalance": ""
+    },
+    {
+      "firstname": "HY8UIJOK",
+      "lastname": "GUYHIIJO",
+      "emailid": "6G78HYUJ9",
+      "dob": "5678-03-04",
+      "gender": "male",
+      "mobilenumber": "GT6YH7U8",
+      "password": "GTYHUJIKO",
+      "accountnumber": "IGT6YHUJ8I",
+      "atmcardnumber": "O6Y7U8I9O0",
+      "expirydate": "275760-03-04",
+      "ifsccode": "6TY7U8I9",
+      "branch": "G6YHUJIO",
+      "id": 6
+    },
+    {
+      "firstname": "GVBHNJ",
+      "lastname": "GYHUJI",
+      "emailid": "TFGYHUJI",
+      "dob": "56789-03-04",
+      "gender": "male",
+      "mobilenumber": "GTYHUJ",
+      "password": "100100",
+      "accountnumber": "100100",
+      "atmcardnumber": "RFTGYHUJI",
+      "expirydate": "56789-03-04",
+      "ifsccode": "FRTGYHUJ",
+      "branch": "3456789",
+      "id": 7
     }
   ]
 }
