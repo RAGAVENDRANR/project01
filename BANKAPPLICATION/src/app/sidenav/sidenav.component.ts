@@ -21,6 +21,7 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit() {
     this.primengConfig.ripple = true;
+    this.router.navigate(['sidenav/homepage'])
   }
   showhomepage(){
     this.router.navigate(['sidenav/homepage'])

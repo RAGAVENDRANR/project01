@@ -14,38 +14,34 @@
 
     <button mat-list-item routerLink="header" routerLinkActive="list-item-active" class="btn"><mat-icon>notifications</mat-icon>Notification </button>
 
-    <button mat-list-item routerLink="donut" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>Notification </button>
-
-    <button mat-list-item routerLink="stacked" routerLinkActive="list-item-active" class="btn"><mat-icon>analytics</mat-icon>Notification </button>
-
     <button mat-list-item class="btn"><mat-icon>edit</mat-icon>Add</button>
 
     </mat-drawer>
 
     <mat-card-content>
      
-        <header style="background-color: rgb(240, 206, 196);text-align:right">
+        <header style="text-align:right; border:.2em solid black; border-radius:.5em;background-color:antiquewhite">
           
-            <button (click)="notifi()" icon="pi pi-bell" pButton value="2"></button>
             <button pButton label="Logout" icon="pi pi-power-off" (click)="logoutfunction()" pRipple class="ui-button-warning"></button>
-            <button  pButton icon="pi pi-user" (click)='profile()'></button>
 
         </header>
-
-        <p-toast position="bottom-center" key="c" (onClose)="onReject()" [baseZIndex]="1000" style="text-align:center">
-            <ng-template let-message pTemplate="message">
-                <div class="p-flex p-flex-column" style="flex: 1">
-                    <div class="p-text-center">
-                        <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
-                        <h4>{{message.summary}}</h4>
+        <body>
+            <p-toast position="bottom-center" key="c" (onClose)="onReject()" [baseZIndex]="1000" style="text-align:center">
+                <ng-template let-message pTemplate="message">
+                    <div class="p-flex p-flex-column" style="flex: 1">
+                        <div class="p-text-center">
+                            <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+                            <h4>{{message.summary}}</h4>
+                        </div>
+                                <button type="button" pButton (click)="onConfirm()" label="EXIT" class="p-button-success"></button>
+                                <button type="button" pButton (click)="onReject()" label="NO" class="p-button-danger"></button>
                     </div>
-                            <button type="button" pButton (click)="onConfirm()" label="EXIT" class="p-button-success"></button>
-                            <button type="button" pButton (click)="onReject()" label="NO" class="p-button-danger"></button>
-                </div>
-            </ng-template>
-        </p-toast>
-      
-    <router-outlet></router-outlet>
+                </ng-template>
+            </p-toast>
+          
+        <router-outlet></router-outlet>
+
+        </body>
     
     </mat-card-content>
     <mat-drawer-container>
