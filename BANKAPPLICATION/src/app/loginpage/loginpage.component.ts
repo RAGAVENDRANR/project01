@@ -18,7 +18,7 @@ export class LoginpageComponent implements OnInit {
   userid: any;
   pwd: any;
   show=false;
-  datalist: any;
+  datalist: any=[];
   save: any;
   username=[];
   userpassword=[];
@@ -34,6 +34,8 @@ export class LoginpageComponent implements OnInit {
       userid:['',Validators.required],
       pwd:['',Validators.required]
     }); 
+    this.api.getdata().subscribe((res:any)=>{this.datalist = res;
+      console.log("DATALIST FETCHING ON BUTTON CLICK" + this.datalist)})
   }
 
   register(){
@@ -42,19 +44,18 @@ export class LoginpageComponent implements OnInit {
   }
 
    onsubmit(){   
-     this.api.getdata().subscribe((res:any)=>{this.datalist = res;
-    console.log("DATALIST FETCHING ON BUTTON CLICK" + this.datalist)})
+
         this.datalist.forEach((curData: any) =>{
           let data=curData;
-          if(this.loginform.controls['userid'].value == data.accountnumber &&  this.loginform.controls['pwd'].value == data.password ){
+          if(this.loginform.controls['userid'].value == data.email &&  this.loginform.controls['pwd'].value == data.password ){
             this.router.navigate(['sidenav'])
             this.loginform.reset()
             this.show=false
-          }else {
+          }else
             console.log("login credentiatiles is invalid")
             this.loginform.reset()
             this.show=true
-          }
+          
         })
     }
   //   this.username = this.datalist.forEach((element:any) => {
