@@ -34,7 +34,7 @@ export class SidenavComponent implements OnInit {
     this.messageService.add({key: 'c', sticky: true, severity:'warn', summary:'Are you sure?', detail:'Confirm to proceed'});
    
   }
-  onReject(){ console.log("Rejected to navigation")
+  onReject(){ console.log("Rejected for navigation")
   this.messageService.clear();}
   onConfirm(){
     this.router.navigate(['loginpage'])
@@ -46,4 +46,3 @@ export class SidenavComponent implements OnInit {
     alert("No Notification yet...")
   }
 }
-
