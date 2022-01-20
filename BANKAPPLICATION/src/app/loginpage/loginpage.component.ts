@@ -12,6 +12,10 @@ export class LoginpageComponent implements OnInit {
   invalidLogin:boolean =false
   login: any;
   message: any;
+  cre ='INVALID CREDENTATILES';
+  userid: any;
+  pwd: any;
+  show=false;
     constructor(  private formBuilder:FormBuilder,
                   private router:Router
                   ) { }
@@ -25,12 +29,20 @@ export class LoginpageComponent implements OnInit {
   }
   onsubmit(){
     console.log(this.loginform.value);
-    this.router.navigate(['sidenav'])
-    this.loginform.reset()
+    if(this.loginform.controls['userid'].value == 'user', this.loginform.controls['pwd'].value == '12345' ){
+      this.router.navigate(['sidenav'])
+      this.cre == ''
+      this.loginform.reset()
+      this.show=false
+    }else {
+      console.log("login credentiatiles is invalid")
+      this.cre == "INVALID CREDENTATILES"
+      this.loginform.reset()
+      this.show=true
+    }
   }
   register(){
     console.log("register button is called");
     this.router.navigate(["signuppage"])
-
   }
 }
